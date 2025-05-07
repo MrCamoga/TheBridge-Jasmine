@@ -9,7 +9,6 @@ describe('Tests', () => {
             expect(isEven(num + 1)).toBe(false);
         });
     });
-
     it('factorial is function', () => {
         expect(typeof factorial).toBe('function');
     });
@@ -19,5 +18,8 @@ describe('Tests', () => {
         expect(factorial(4)).toBe(24);
         expect(factorial(5)).toBe(120);
         expect(factorial(10)).toBe(3628800);
+    });
+    it('factorial of negative integer', () => {
+        expect(() => factorial(-1)).toThrow(new Error('factorial of negative integer is not defined'));
     });
 });
